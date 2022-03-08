@@ -1,191 +1,101 @@
-export const newSeason = [
+import images from "./images"
+
+const bookOtherWordsForHome = {
+    id: 1,
+    bookName: "Other Words For Home",
+    bookCover: images.otherWordsForHome,
+    rating: 4.5,
+    language: "Eng",
+    pageNo: 341,
+    author: "Jasmine Warga",
+    genre: [
+        "Romance", "Adventure", "Drama"
+    ],
+    readed: "12k",
+    description: "Jude never thought she’d be leaving her beloved older brother and father behind, all the way across the ocean in Syria. But when things in her hometown start becoming volatile, Jude and her mother are sent to live in Cincinnati with relatives. At first, everything in America seems too fast and too loud. The American movies that Jude has always loved haven’t quite prepared her for starting school in the US—and her new label of 'Middle Eastern,' an identity she’s never known before. But this life also brings unexpected surprises—there are new friends, a whole new family, and a school musical that Jude might just try out for. Maybe America, too, is a place where Jude can be seen as she really is.",
+    backgroundColor: "rgba(240,240,232,0.9)",
+    navTintColor: "#000"
+}
+
+const bookTheMetropolis = {
+    id: 2,
+    bookName: "The Metropolis",
+    bookCover: images.theMetropolist,
+    rating: 4.1,
+    language: "Eng",
+    pageNo: 272,
+    author: "Seith Fried",
+    genre: [
+        "Adventure", "Drama"
+    ],
+    readed: "13k",
+    description: "In Metropolis, the gleaming city of tomorrow, the dream of the great American city has been achieved. But all that is about to change, unless a neurotic, rule-following bureaucrat and an irreverent, freewheeling artificial intelligence can save the city from a mysterious terrorist plot that threatens its very existence. Henry Thompson has dedicated his life to improving America's infrastructure as a proud employee of the United States Municipal Survey. So when the agency comes under attack, he dutifully accepts his unexpected mission to visit Metropolis looking for answers. But his plans to investigate quietly, quickly, and carefully are interrupted by his new partner: a day-drinking know-it-all named OWEN, who also turns out to be the projected embodiment of the agency's supercomputer. Soon, Henry and OWEN are fighting to save not only their own lives and those of the city's millions of inhabitants, but also the soul of Metropolis. The Municipalists is a thrilling, funny, and touching adventure story, a tour-de-force of imagination that trenchantly explores our relationships to the cities around us and the technologies guiding us into the future.",
+    backgroundColor: "rgba(247,239,219,0.9)",
+    navTintColor: "#000"
+}
+
+const bookTheTinyDragon = {
+    id: 3,
+    bookName: "The Tiny Dragon",
+    bookCover: images.theTinyDragon,
+    rating: 3.5,
+    language: "Eng",
+    pageNo: 110,
+    author: "Ana C Bouvier",
+    genre: [
+        "Drama", "Adventure", "Romance"
+    ],
+    readed: "13k",
+    description: "This sketchbook for kids is the perfect tool to improve your drawing skills! Designed to encourage kids around the world to express their uniqueness through drawing, sketching or doodling, this sketch book is filled with 110 high quality blank pages for creations. Add some fun markers, crayons, and art supplies and you have the perfect, easy gift for kids!",
+    backgroundColor: "rgba(119,77,143,0.9)",
+    navTintColor: "#FFF"
+}
+
+export const myBooksData = [
     {
-        id: 1,
-        name: "Barbarians",
-        thumbnail: require("../assets/images/series/barbarians/barbarians_cover.jpg"),
-        stillWatching: [
-            {
-                id: 1,
-                profile: require("../assets/images/dummy_profile/1.jpg")
-            },
-            {
-                id: 2,
-                profile: require("../assets/images/dummy_profile/2.jpg")
-            },
-            {
-                id: 3,
-                profile: require("../assets/images/dummy_profile/3.jpg")
-            },
-            {
-                id: 4,
-                profile: require("../assets/images/dummy_profile/4.jpg")
-            },
-            {
-                id: 5,
-                profile: require("../assets/images/dummy_profile/5.jpg")
-            },
-            {
-                id: 6,
-                profile: require("../assets/images/dummy_profile/6.jpg")
-            },
-        ],
-        details: {
-            image: require("../assets/images/series/barbarians/barbarians.jpg"),
-            age: "16+",
-            genre: "Historical Drama",
-            ratings: 7.2,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E1 "Episode 1 : Vikings"',
-            runningTime: "45m",
-            progress: "0%"
-        }
+        ...bookOtherWordsForHome,
+        completion: "75%",
+        lastRead: "3d 5h",
+
     },
     {
-        id: 2,
-        name: "Bridgerton",
-        thumbnail: require("../assets/images/series/bridgerton/bridgerton_cover.jpg"),
-        stillWatching: [
-            {
-                id: 1,
-                profile: require("../assets/images/dummy_profile/6.jpg")
-            },
-            {
-                id: 2,
-                profile: require("../assets/images/dummy_profile/7.jpg")
-            },
-            {
-                id: 3,
-                profile: require("../assets/images/dummy_profile/3.jpg")
-            },
-            {
-                id: 4,
-                profile: require("../assets/images/dummy_profile/4.jpg")
-            }
-        ],
-        details: {
-            image: require("../assets/images/series/bridgerton/bridgerton.jpg"),
-            age: "18+",
-            genre: "Romance",
-            ratings: 7.3,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E6 "Episode 6 : Swish"',
-            runningTime: "45m",
-            progress: "50%"
-        }
+        ...bookTheMetropolis,
+        completion: "23%",
+        lastRead: "10d 5h",
+
     },
     {
-        id: 3,
-        name: "Money Heist",
-        thumbnail: require("../assets/images/series/money_heist/money_heist_cover.jpg"),
-        stillWatching: [],
-        details: {
-            image: require("../assets/images/series/money_heist/money_heist.jpg"),
-            age: "16+",
-            genre: "Crime",
-            ratings: 8.3,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E15 "Episode 15 : Bella ciao"',
-            runningTime: "45m",
-            progress: "50%"
-        }
-    },
-    {
-        id: 4,
-        name: "Salvation",
-        thumbnail: require("../assets/images/series/salvation/salvation_cover.jpg"),
-        stillWatching: [
-            {
-                id: 1,
-                profile: require("../assets/images/dummy_profile/1.jpg")
-            },
-            {
-                id: 2,
-                profile: require("../assets/images/dummy_profile/2.jpg")
-            },
-            {
-                id: 3,
-                profile: require("../assets/images/dummy_profile/3.jpg")
-            },
-        ],
-        details: {
-            image: require("../assets/images/series/salvation/salvation.jpg"),
-            age: "13+",
-            genre: "Sci-Fi",
-            ratings: 7.0,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E1 "Episode 1 : Pilot"',
-            runningTime: "45m",
-            progress: "0%"
-        }
-    },
+        ...bookTheTinyDragon,
+        completion: "10%",
+        lastRead: "1d 2h",
+
+    }
 ]
-export const continueWatching = [
+
+export const categoriesData = [
     {
         id: 1,
-        name: "Prison Break",
-        thumbnail: require("../assets/images/series/prison_break/prison_break_cover.jpg"),
-        overallProgress: "20%",
-        details: {
-            image: require("../assets/images/series/prison_break/prison_break.webp"),
-            age: "16+",
-            genre: "Action",
-            ratings: 8.3,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E8 "Episode 8 : The Old Head"',
-            runningTime: "45m",
-            progress: "50%"
-        }
+        categoryName: "Best Seller",
+        books: [
+            bookOtherWordsForHome, bookTheMetropolis, bookTheTinyDragon
+        ]
     },
     {
         id: 2,
-        name: "House of Cards",
-        thumbnail: require("../assets/images/series/house_of_cards/house_of_cards_cover.jpg"),
-        overallProgress: "50%",
-        details: {
-            image: require("../assets/images/series/house_of_cards/house_of_cards.jpg"),
-            age: "16+",
-            genre: "Political Drama",
-            ratings: 8.7,
-            season: "SEASON 1",
-            currentEpisode: 'S4 : E1 "Chapter 40"',
-            runningTime: "45m",
-            progress: "50%"
-        }
+        categoryName: "The Latest",
+        books: [
+            bookTheMetropolis
+        ]
     },
     {
         id: 3,
-        name: "Bridgerton",
-        thumbnail: require("../assets/images/series/bridgerton/bridgerton_cover.jpg"),
-        overallProgress: "70%",
-        details: {
-            image: require("../assets/images/series/bridgerton/bridgerton.jpg"),
-            age: "18+",
-            genre: "Romance",
-            ratings: 7.3,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E6 "Episode 6 : Swish"',
-            runningTime: "45m",
-            progress: "50%"
-        }
-    },
-    {
-        id: 4,
-        name: "Money Heist",
-        thumbnail: require("../assets/images/series/money_heist/money_heist_cover.jpg"),
-        overallProgress: "40%",
-        details: {
-            image: require("../assets/images/series/money_heist/money_heist.jpg"),
-            age: "16+",
-            genre: "Crime",
-            ratings: 8.3,
-            season: "SEASON 1",
-            currentEpisode: 'S1 : E15 "Episode 15 : Bella ciao"',
-            runningTime: "45m",
-            progress: "50%"
-        }
+        categoryName: "Coming Soon",
+        books: [
+            bookTheTinyDragon
+        ]
     },
 ]
 
-const dummyData = { newSeason, continueWatching };
+const dummyData = { myBooksData, categoriesData };
 
 export default dummyData;
