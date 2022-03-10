@@ -7,7 +7,7 @@ import {
 const BookDetail = ()=>{
     return(
         <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-            <Text>Home Screen</Text>
+            <Text>Book detail</Text>
         </View>
     )
 }
