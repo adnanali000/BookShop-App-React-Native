@@ -213,6 +213,56 @@ const BookDetail = ({ route, navigation }) => {
         )
     }
 
+    function renderBottomButton(){
+        return(
+            <View style={{flex:1,flexDirection:'row'}}>
+                {/* bookmark  */}
+                <TouchableOpacity
+                    style={{
+                        width:60,
+                        backgroundColor:COLORS.secondary,
+                        marginVertical:SIZES.base,
+                        marginLeft:SIZES.padding,
+                        borderRadius:SIZES.radius,
+                        alignItems:'center',
+                        justifyContent:'center'
+                    }}
+                    onPress={()=>alert('bookmark')}
+                >
+                    <Image 
+                        source={icons.bookmark_icon}
+                        resizeMode='contain'
+                        style={{
+                            width:25,
+                            height:25,
+                            tintColor:COLORS.lightGray2
+
+                        }}
+                    
+                    />
+
+                </TouchableOpacity>
+
+
+                {/* reading btn  */}
+                <TouchableOpacity style={{
+                    flex:1,
+                    backgroundColor:COLORS.primary,
+                    marginHorizontal:SIZES.base,
+                    marginVertical:SIZES.base,
+                    borderRadius:SIZES.radius,
+                    alignItems:'center',
+                    justifyContent:'center'
+                }}
+                onPress={()=>alert('Read now')}
+                >
+                    <Text style={{...FONTS.h3,color:COLORS.white}}>Start Reading</Text>
+                </TouchableOpacity>
+
+            </View>
+        )
+    }
+
     if (book) {
         return (
             <View style={{ flex: 1, backgroundColor: COLORS.black }}>
@@ -227,8 +277,8 @@ const BookDetail = ({ route, navigation }) => {
                 </View>
 
                 {/* buttons  */}
-                <View style={{ height: 70 }}>
-
+                <View style={{ height: 70 , marginBottom:30 }}>
+                    {renderBottomButton()}
                 </View>
             </View>
         )
